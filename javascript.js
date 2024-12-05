@@ -14,20 +14,51 @@ listaCanciones.forEach((cancion,i)=>{
     console.log(`${cancion} - id: ${i}`);
         
         // innerHTML
-        divCanciones.innerHTML += `<div id="ListaCanciones" class="Lista">
-        ${listaCanciones[i]} - ${listaArtistas[i]}
+        divCanciones.innerHTML += `<div id="Cancion_${i}" class="Lista-cancion">
+                                   ${i+1}. ${listaCanciones[i]} - ${listaArtistas[i]}
                                    </div>`   
 });
 
+
+
 btnCancion3.addEventListener('click', ()=>{
-    console.log(`El tema 3 es: ${listaCanciones[3]} de ${listaArtistas[3]}`);
+    console.log(`El tema 3 es: ${listaCanciones[2]} de ${listaArtistas[2]}`); // índice 2 porque lalista empieza en índice 0
 });
+
+// document.addEventListener('click', (event) => {
+//     console.log(event.target.id);
+// });
+
+// buscamos en nuestro HTML todos los divs con class Lista
+const divsCanciones = document.querySelectorAll(".Lista-cancion");
+const divPlayingSong = document.getElementById("PlayingSong");
+
+divsCanciones.forEach((divCancion, i) => {
+    divCancion.addEventListener("click", () => {
+        console.log(`${listaCanciones[i]} - ${listaArtistas[i]}`);
+        // canción reproduciendose
+        divPlayingSong.innerHTML =  `<div> 
+                                    ${listaCanciones[i]}<br>
+                                    ${listaArtistas[i]}
+                                   </div>` 
+    });
+});
+
+// function inprimiReproduciendose((indice) =>{
+//     console.log(`${listaCanciones[indice]} - ${listaArtistas[indice]}`);
+//         // canción reproduciendose
+//         divPlayingSong.innerHTML =  `<div> 
+//                                     ${listaCanciones[i]}<br>
+//                                     ${listaArtistas[i]}
+//                                    </div>`;
+// });
 
 let cantCanciones = listaCanciones.length;
 let cantArtistas = listaArtistas.length;
+let idCancionActual = 0; // pimera cancion
 
-btnAnterior.addEventListener('click', (event) => {
-    console.log(event.target.id);
+btnAnterior.addEventListener('click', () => {
+    // console.log(event.target.id);
     // console.log(cantCanciones);
     // console.log(cantArtistas);
     cantArtistas = cantArtistas-1;
@@ -35,8 +66,8 @@ btnAnterior.addEventListener('click', (event) => {
     console.log(`Canción anterior ${listaCanciones[cantCanciones]} de ${listaArtistas[cantArtistas]}`);
 });
 
-btnPlay.addEventListener('click', (event) => {
-    console.log(event.target.id);
+btnPlay.addEventListener('click', () => {
+    // console.log(event.target.id);
     // console.log(cantCanciones);
     // console.log(cantArtistas);
     // cantArtistas = cantArtistas+1;
@@ -44,8 +75,8 @@ btnPlay.addEventListener('click', (event) => {
     console.log(`Canción siguiente ${listaCanciones[cantCanciones]} de ${listaArtistas[cantArtistas]}`);
 });
 
-btnSiguiente.addEventListener('click', (event) => {
-    console.log(event.target.id);
+btnSiguiente.addEventListener('click', () => {
+    // console.log(event.target.id);
     // console.log(cantCanciones);
     // console.log(cantArtistas);
     cantArtistas = cantArtistas+1;
