@@ -5,3 +5,19 @@
     padding: 0;
 }
 
+.btn-ForBack{
+    width: 3rem;
+    height: 4rem;
+    font-size: 1.8rem;
+    border: 0px;
+    background-color: transparent
+}
+
+.btn-PlayPause{
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 4rem;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
