@@ -71,12 +71,14 @@ listaCanciones.forEach((cancion,i)=>{
 // Buscamos en nuestro HTML todos los divs con class Lista
 const divsCanciones = document.querySelectorAll(".Lista-cancion");
 const divPlayingSong = document.getElementById("PlayingSong");
+const divReproductor = document.getElementById("Reproductor");
 
 divsCanciones.forEach((divCancion, i) => {
     divCancion.addEventListener("click", () => {
         
         idCancionActual = i;
         imprimiReproduciendo();
+ 
     });
 });
 
@@ -92,6 +94,10 @@ function imprimiReproduciendo(){
                                     <img src = "${listaCanciones[idCancionActual].img}" alt = "imagen${idCancionActual}"
                                    </div>`;
 
+        // divReproductor.innerHTML = `<div class="Reproductor-imagen"> 
+        //                             <img src = "${listaCanciones[idCancionActual].img}" alt = "imagen${idCancionActual}"
+        //                            </div>`;
+
         // Cambiar el src de nuestro audio HTML
         audioPlay.src = listaCanciones[idCancionActual].url;
 };
@@ -102,10 +108,12 @@ btnAnterior.addEventListener('click', () => {
     if (idCancionActual>0){
             idCancionActual--;
             imprimiReproduciendo ();
+            btnPlayPausa.classList.toggle('fa-play');
     } else{
             idCancionActual=listaCanciones.length-1;
             console.log(idCancionActual);
             imprimiReproduciendo ();
+            btnPlayPausa.classList.toggle('fa-play');
     }
 });
 
@@ -138,10 +146,12 @@ btnSiguiente.addEventListener('click', () => {
         if (idCancionActual<listaCanciones.length-1){
             idCancionActual++;
             imprimiReproduciendo ();
+            btnPlayPausa.classList.toggle('fa-play');
     } else{
             idCancionActual=0;
             console.log(idCancionActual);
             imprimiReproduciendo ();
+            btnPlayPausa.classList.toggle('fa-play');
     }
 });
 

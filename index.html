@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproductor de Música</title>
 
     <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body class="Body">
 
     <div id="ListaCanciones" class="Lista">
     </div>
 
-    <!-- <h3>Cancion Reproduciendose</h3> -->
-    <div id="PlayingSong" class="PlayingSong"></div>
+    <div id="Reproductor" class="Reproductor">
+        
+        <!-- <h3>Cancion Reproduciendose</h3> -->
+        <div id="PlayingSong" class="PlayingSong"></div>
 
-    <!-- <button id="BtnCancion3">Tema 3</button> -->
-<div class="CajaBtns">
-    <button id="BtnAnterior" class="Btn-forBack fa-solid fa-backward-step"></button>
-    <button id="BtnPlayPausa" class="Btn-playPause fa-solid fa-play fa-pause"></button>
-    <!-- <button id="BtnPausa" class="btn-PlayPause fa-solid fa-pause"></button> -->
-    <button id="BtnSiguiente" class="Btn-forBack fa-solid fa-forward-step"></button>
-</div>
+        <!-- <button id="BtnCancion3">Tema 3</button> -->
+        <div class="CajaBtns">
+            <button id="BtnAnterior" class="Btn-forBack fa-solid fa-backward-step"></button>
+            <button id="BtnPlayPausa" class="Btn-playPause fa-solid fa-play fa-pause"></button>
+            <!-- <button id="BtnPausa" class="btn-PlayPause fa-solid fa-pause"></button> -->
+            <button id="BtnSiguiente" class="Btn-forBack fa-solid fa-forward-step"></button>
+        </div>
+    </div>
 
-<!-- Etiqueta HTML que me permite reproducir audios. -->
-<audio src="" autoplay controls></audio>
+    <!-- Etiqueta HTML que me permite reproducir audios. -->
+    <audio src="" controls></audio>
 
-<!-- Barra de progreso de la canción -->
-<div class="audio-bar">
-    <div class="audio-bar-line"></div>
-</div>
+    <!-- Barra de progreso de la canción -->
+    <div class="audio-bar">
+        <div class="audio-bar-line"></div>
+    </div>
 
 
-<script src="./javascript.js"></script>
-    
+    <script src="./javascript.js"></script>
+
 </body>
+
 </html>
