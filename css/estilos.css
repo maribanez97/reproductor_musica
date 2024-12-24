@@ -14,7 +14,7 @@
 }
 
 .Lista {
-    display: flex;
+    display: none;
     flex-direction: column;
     margin-bottom: 5rem;
 
@@ -74,4 +74,24 @@
     border-radius: 4rem;
     border: 0px;
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.AudioControles {
+    display: none;
+}
+
+.audio-bar {
+    width: 100%;
+    background-color: rgb(170, 170, 170);
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 16rem;
+}
+
+.audio-bar-line {
+    height: 3px;
+    width: 0;
+    background-color: rgb(19, 19, 19);
+    border-radius: 5px;
 }

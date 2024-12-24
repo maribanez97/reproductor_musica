@@ -44,6 +44,7 @@ const btnSiguiente = document.querySelector("#BtnSiguiente")
 // Definir audio
 const audioPlay = document.querySelector("audio") // agarra la primera etiqueta de audio que encuentre
 
+
 let idCancionActual = 0; // pimera cancion
 
         
